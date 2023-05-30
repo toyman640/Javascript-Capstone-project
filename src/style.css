@@ -1,3 +1,9 @@
 body {
   background-color: bisque;
 }
+
+#footer {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(4, 66, 46);
+}
