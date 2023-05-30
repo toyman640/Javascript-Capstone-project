@@ -28,3 +28,25 @@ body {
   justify-content: center;
   border: 1px solid rgb(4, 66, 46);
 }
+
+.meal-card {
+  padding: 15px;
+}
+
+.meal-img {
+  height: 200px;
+}
+
+.meals {
+  width: 80%;
+  margin-left: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.inner-part {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
