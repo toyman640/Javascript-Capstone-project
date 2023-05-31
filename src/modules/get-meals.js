@@ -40,11 +40,28 @@ const viewData = () => {
     });
 };
 
+const showPop = (buttonId) => {
+  console.log(buttonId);
+  fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${buttonId}`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+      popCard.innerHTML = `
+      <div>
+        <p>${data.meals[0].strMeal}</p>
+      </div>
+      `
+    })
+  popCard.classList.toggle('pop-card')
+}
+
 const checkbtn = (event) => {
   if (event.target.classList.contains('buttons')) {
     // Handle button click event here
     // const mealName = event.target.closest('.meal-card').querySelector('p').textContent;
     // console.log('Button clicked for:', mealName);
+    const buttonId = event.target.id;
+    showPop(buttonId)
 
   }
 };
