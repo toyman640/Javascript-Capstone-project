@@ -1,6 +1,8 @@
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?f=b';
 const maindiv = document.querySelector('.meals');
+const popCard = document.querySelector('.pop-card');
 
+let mealsButton;
 const viewData = () => {
   fetch(url, { mode: 'cors' }, {
     method: 'GET',
@@ -10,7 +12,16 @@ const viewData = () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      data.meals.forEach((element) => {
+      const mealStore = [];
+      let counter = 0
+      data.meals.forEach((info) => {
+        if (counter < 6) {
+          mealStore.push(info)
+          counter += 1;
+        }
+      })
+      console.log(mealStore);
+      mealStore.forEach((element) => {
         const mealsDiv = document.createElement('div');
         mealsDiv.classList.add('meals-div');
         mealsDiv.innerHTML = `
@@ -21,12 +32,26 @@ const viewData = () => {
             <img alt="likes">
           </div>
           <p> 10 Likes</p>
-          <button class="buttons" > Comments </button>
+          <button id= "${element.idMeal}" class="buttons" > Comments </button>
         </div>
         `;
         maindiv.appendChild(mealsDiv);
       });
     });
 };
+
+const checkbtn = (event) => {
+  if (event.target.classList.contains('buttons')) {
+    // Handle button click event here
+    // const mealName = event.target.closest('.meal-card').querySelector('p').textContent;
+    // console.log('Button clicked for:', mealName);
+
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  viewData();
+  maindiv.addEventListener('click', checkbtn); // Attach the event listener to the parent container
+});
 
 module.exports = viewData;

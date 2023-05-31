@@ -50,3 +50,7 @@ body {
   justify-content: space-between;
   width: 50%;
 }
+
+.pop-card {
+  display: none;
+}
