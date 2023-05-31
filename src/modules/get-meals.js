@@ -21,7 +21,7 @@ const viewData = () => {
             <img alt="likes">
           </div>
           <p> 10 Likes</p>
-          <button class="buttons" > Comments </button>
+          <button class="buttons" value="comments"> Comments </button>
         </div>
         `;
         maindiv.appendChild(mealsDiv);
