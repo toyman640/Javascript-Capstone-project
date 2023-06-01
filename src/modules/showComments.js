@@ -63,4 +63,4 @@ const checkbtn = (event) => {
   }
 };
 
-export { checkbtn };
+export default checkbtn;
