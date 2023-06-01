@@ -1,10 +1,11 @@
-import { checkbtn } from './showComments.js';
-
+import Love from "./love.png"
+import { addlikeBtn } from "./likes.js";
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?f=b';
 const maindiv = document.querySelector('.meals');
 // const popCard = document.querySelector('.pop-card');
 
-const viewData = () => {
+
+const viewData = (pageLikes) => {
   fetch(url, { mode: 'cors' }, {
     method: 'GET',
     headers: {
@@ -23,6 +24,8 @@ const viewData = () => {
       });
 
       mealStore.forEach((element) => {
+        const id = element.idMeal
+        const mealLikes = pageLikes.find((like) => like.item_id === id);
         const mealsDiv = document.createElement('div');
         mealsDiv.classList.add('meals-div');
         mealsDiv.innerHTML = `
@@ -30,9 +33,9 @@ const viewData = () => {
           <img class="meal-img" src=${element.strMealThumb}>
           <div class="inner-part">
             <p>${element.strMeal}</p>
-            <img alt="likes">
+            <button id= "${element.idMeal}" class="likes-button"><img alt="likes" class="likes-icon" src="${Love}"></button>
           </div>
-          <p> 10 Likes</p>
+          <p id="likes-count-${element.idMeal}" class="likes-count" >${mealLikes ? mealLikes.likes : 0} Likes</p>
           <button id= "${element.idMeal}" class="buttons" > Comments </button>
         </div>
         `;

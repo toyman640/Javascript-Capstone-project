@@ -5,7 +5,7 @@ const showPop = (buttonId) => {
     .then((res) => res.json())
     .then((data) => {
       popCard.innerHTML = `
-      <div class="popup">
+      <div class="">
     <img class="close" onclick="this.parentNode.style.display = 'none';" src="https://static.vecteezy.com/system/resources/thumbnails/020/048/793/small/x-transparent-background-free-png.png">
       <div class="popup-container">
       <img class="popImg" src="${data.meals[0].strMealThumb}">
@@ -58,9 +58,6 @@ const showPop = (buttonId) => {
 
 const checkbtn = (event) => {
   if (event.target.classList.contains('buttons')) {
-    // Handle button click event here
-    // const mealName = event.target.closest('.meal-card').querySelector('p').textContent;
-    // console.log('Button clicked for:', mealName);
     const buttonId = event.target.id;
     showPop(buttonId);
   }
