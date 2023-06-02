@@ -2,6 +2,7 @@ import Love from './love.png';
 
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?f=b';
 const maindiv = document.querySelector('.meals');
+const mealsNum = document.querySelector('.meals-count');
 // const popCard = document.querySelector('.pop-card');
 
 const viewData = (pageLikes) => {
@@ -21,7 +22,9 @@ const viewData = (pageLikes) => {
           counter += 1;
         }
       });
-
+      const countItems = (mealStore) => mealStore.length;
+      const counterMeal = countItems(mealStore);
+      mealsNum.innerHTML = `(${counterMeal})`;
       mealStore.forEach((element) => {
         const id = element.idMeal;
         const mealLikes = pageLikes.find((like) => like.item_id === id);

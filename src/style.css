@@ -51,11 +51,6 @@ body {
   width: 50%;
 }
 
-.close {
-  width: 5%;
-  align-self: flex-end;
-}
-
 .popup-container {
   background: aquamarine;
   width: 70%;
@@ -144,4 +139,34 @@ body {
   border: 0;
   background: inherit;
   cursor: pointer;
+}
+
+.closeBtn {
+  border: 0;
+  background: inherit;
+  margin-left: 90%;
+  margin-bottom: 8px;
+}
+
+.card {
+  position: absolute;
+  width: 50%;
+  margin-left: 25%;
+  z-index: 1;
+}
+
+.close {
+  width: 10px;
+}
+
+.blur {
+  filter: blur(8px);
+}
+
+.comment-title {
+  text-align: center;
+}
+
+.hide-div {
+  visibility: hidden;
 }

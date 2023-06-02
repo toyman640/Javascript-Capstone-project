@@ -12,15 +12,4 @@ const loadPage = async () => {
   maindiv.addEventListener('click', (checkbtn));
   maindiv.addEventListener('click', (checklike));
 };
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   viewData();
-//   getLikes();
-//   maindiv.addEventListener('click', (checkbtn));
-//   maindiv.addEventListener('click', (checklike));
-
-// });
-
-// window.addEventListener('load', viewData);
-
 loadPage();
