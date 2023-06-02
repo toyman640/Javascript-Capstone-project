@@ -129,3 +129,19 @@ body {
 .pop-card {
   display: none;
 }
+
+.likes-icon {
+  height: 20px;
+  margin-top: 15px;
+}
+
+.likes-count {
+  margin-left: 40%;
+  margin-top: -10px;
+}
+
+.likes-button {
+  border: 0;
+  background: inherit;
+  cursor: pointer;
+}
