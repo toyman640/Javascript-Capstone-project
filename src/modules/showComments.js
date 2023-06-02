@@ -38,7 +38,7 @@ const showPop = (buttonId) => {
       <input type="text" id="name" class="username" placeholder="username"><br>
       <textarea id="msg" name="user_message" placeholder="Your insight" required maxlength="500"></textarea><br>
       <button id="commentBtn" class="submit" type="button">Comment</button>
-      <div class="idMeal">${data.meals[0].idMeal}</div>
+      <div class="idMeal hide-div">${data.meals[0].idMeal}</div>
       </form>
       </div>
       </div>

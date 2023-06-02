@@ -166,3 +166,7 @@ body {
 .comment-title {
   text-align: center;
 }
+
+.hide-div {
+  visibility: hidden;
+}
