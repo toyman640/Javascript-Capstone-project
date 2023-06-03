@@ -1,3 +1,5 @@
+import countComment from './commentCount.js';
+
 const getComment = async () => {
   const commentId1 = document.querySelector('.idMeal');
   const commentIdval = commentId1.innerHTML;
@@ -14,7 +16,7 @@ const getComment = async () => {
       if (data.length === undefined) {
         commentDiv.innerHTML = 'no comments';
       } else {
-        const commentNum = data.length;
+        const commentNum = countComment(data);
         const comCount = document.createElement('h3');
         comCount.classList.add('comment-title');
         comCount.innerHTML = `Comments (${commentNum})`;
