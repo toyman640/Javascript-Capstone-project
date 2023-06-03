@@ -58,7 +58,10 @@ Like button feature
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link]--Coming soon
+- [Live Demo Link]
+
+https://toyman640.github.io/Javascript-Capstone-project/dist/
+
 
 
 <p align="right">(<a href="#readme-top"></a>)</p>
