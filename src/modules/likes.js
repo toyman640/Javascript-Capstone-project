@@ -1,13 +1,13 @@
 const likesUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UeRVpttbuH5idOpNpTZz/likes';
 
-const likePost = (likesId) => {
+const likePost = async (likesId) => {
   const likesCount = document.getElementById(`likes-count-${likesId}`);
   if (likesCount) {
     const currentLikes = parseInt(likesCount.textContent, 10);
     const newLikes = currentLikes + 1;
     likesCount.textContent = `${newLikes} Likes`;
   }
-  fetch(likesUrl, {
+  await fetch(likesUrl, {
     method: 'POST',
     body: JSON.stringify({
       item_id: likesId,

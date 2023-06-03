@@ -5,8 +5,8 @@ const url = 'https://www.themealdb.com/api/json/v1/1/search.php?f=b';
 const maindiv = document.querySelector('.meals');
 const mealsNum = document.querySelector('.meals-count');
 
-const viewData = (pageLikes) => {
-  fetch(url, { mode: 'cors' }, {
+const viewData = async (pageLikes) => {
+  await fetch(url, { mode: 'cors' }, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

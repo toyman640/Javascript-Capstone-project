@@ -3,7 +3,7 @@ import countComment from './commentCount.js';
 const getComment = async () => {
   const commentId1 = document.querySelector('.idMeal');
   const commentIdval = commentId1.innerHTML;
-  fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UeRVpttbuH5idOpNpTZz/comments?item_id=${commentIdval}`, { mode: 'cors' }, {
+  await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UeRVpttbuH5idOpNpTZz/comments?item_id=${commentIdval}`, { mode: 'cors' }, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
