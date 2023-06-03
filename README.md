@@ -62,6 +62,10 @@ Like button feature
 
 https://toyman640.github.io/Javascript-Capstone-project/dist/
 
+## Video Walkthrough 📹🚶
+
+- [Video-Walkthrough] https://drive.google.com/file/d/1wKLEIDIWqFQyXnap5koxtaBsWNyjYJ9a/view?usp=sharing
+
 
 
 <p align="right">(<a href="#readme-top"></a>)</p>
