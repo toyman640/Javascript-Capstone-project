@@ -34,7 +34,7 @@ const viewData = (pageLikes) => {
           <img class="meal-img" src=${element.strMealThumb}>
           <div class="inner-part">
             <p>${element.strMeal}</p>
-            <button id= "${element.idMeal}" class="likes-button"><img alt="likes" class="likes-icon" src="${Love}"></button>
+            <button  class="likes-button"><img id="${element.idMeal}" alt="likes" class="likes-icon" src="${Love}"></button>
           </div>
           <p id="likes-count-${element.idMeal}" class="likes-count" >${mealLikes ? mealLikes.likes : 0} Likes</p>
           <button id= "${element.idMeal}" class="buttons" > Comments </button>

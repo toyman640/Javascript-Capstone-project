@@ -19,7 +19,7 @@ const likePost = (likesId) => {
 };
 
 const checklike = (event) => {
-  if (event.target.classList.contains('likes-button')) {
+  if (event.target.classList.contains('likes-icon')) {
     const likesId = event.target.getAttribute('id');
     likePost(likesId);
   }
