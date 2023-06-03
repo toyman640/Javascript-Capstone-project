@@ -1,0 +1,172 @@
+body {
+  background-color: bisque;
+}
+
+.navigation {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  font-weight: 700;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(4, 66, 46);
+}
+
+.meal-card {
+  padding: 15px;
+}
+
+.meal-img {
+  height: 200px;
+}
+
+.meals {
+  width: 80%;
+  margin-left: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.inner-part {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.popup-container {
+  background: aquamarine;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+
+.popup {
+  overflow: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+
+.popImg {
+  max-width: 85%;
+  border-radius: 20px;
+}
+
+.FoodName {
+  font-size: 30px;
+  color: black;
+  align-self: center;
+}
+
+.ingredients {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.ingredientC {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.commentTitle {
+  font-size: 20px;
+}
+
+.comments p {
+  font-size: 17px;
+}
+
+.flexForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+  width: 30%;
+  padding: 8px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.pop-card {
+  display: none;
+}
+
+.likes-icon {
+  height: 20px;
+  margin-top: 15px;
+}
+
+.likes-count {
+  margin-left: 40%;
+  margin-top: -10px;
+}
+
+.likes-button {
+  border: 0;
+  background: inherit;
+  cursor: pointer;
+}
+
+.closeBtn {
+  border: 0;
+  background: inherit;
+  margin-left: 90%;
+  margin-bottom: 8px;
+}
+
+.card {
+  position: absolute;
+  width: 50%;
+  margin-left: 25%;
+  z-index: 1;
+}
+
+.close {
+  width: 10px;
+}
+
+.blur {
+  filter: blur(8px);
+}
+
+.comment-title {
+  text-align: center;
+}
+
+.hide-div {
+  visibility: hidden;
+}
